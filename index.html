@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS: for layout style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Personal Finance Manager</title>
+</head>
+<body>
+    <div class="jumbotron p-4 mb-0" id="header">
+        <h1 class="text-white text-center">Personal Finance Manager</h1>      
+        <p class="text-white text-center"> Start tracking of your income and expenses and understand your spending habits.</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto justify-content-between">
+                <li class="nav-item text-center mx-3">
+                    <a class="nav-link" href="./history.html">Histroy</a>
+                </li>
+                <li class="nav-item text-center mx-3">
+                    <a class="nav-link active" href="./index.html" id="mode_display">Add New</a>
+                </li>
+                <li class="nav-item text-center mx-3">
+                    <a class="nav-link" href="./recap.html">Recap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-sm my-5">
+        <form id="new_txn">
+            <div class="form-group my-3">
+                <label for="txn_date">Date</label>
+                <input type="date" class="form-control" id="txn_date" name="txn_date" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please match the format yyyy/mm/dd!
+                </div>
+            </div>
+
+            <div class="form-group my-3">
+                <label for="txn_type">Transaction Type</label>
+                <select class="form-select" id="txn_type" name="txn_type" required>
+                    <option value="" selected disabled>Select Type</option>
+                    <option value="1">Income</option>
+                    <option value="2">Expenses</option>
+                </select>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please only choose income or expenses!
+                </div>
+            </div>
+
+            <div class="form-group my-3">
+                <label for="txn_amt">Ammount</label>
+                <input type="number" step="0.01" class="form-control" id="txn_amt" name="txn_amt" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Ammount can't be negative!
+                </div>
+            </div>
+            
+            <div class="form-group my-3">
+                <label for="txn_cat">Category</label>
+                <select class="form-control" id="txn_cat" name="txn_cat" required>
+                    <option value="cat_0" selected disabled>Select Category</option>
+                </select>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Can not find category! 
+                </div>
+
+                <input type="text" class="form-control mt-2 d-none" id="newCategoryInput" placeholder="Enter new category">
+            </div>
+
+            <div class="form-group my-3">
+                <label for="txn_note">Note</label>
+                <textarea class="form-control" id="txn_note"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary my-3" id="new_txn_submit">Submit</button>
+
+            <div class="alert alert-success my-3 d-none" id="new_txn_alert" role="alert">
+                Transaction successully added!
+            </div>
+        </form>
+    </div>  
+    
+    <!-- Bootstrap Requied JS:  Popper.js and Bootstrap's JavaScript plugins-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- My JS -->
+    <script src="./app.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS: for layout style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Personal Finance Manager</title>
+</head>
+<body>
+    <div class="jumbotron p-4 mb-0" id="header">
+        <h1 class="text-white text-center">Personal Finance Manager</h1>      
+        <p class="text-white text-center"> Start tracking of your income and expenses and understand your spending habits.</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto justify-content-between">
+                <li class="nav-item text-center mx-3">
+                    <a class="nav-link" href="./history.html">Histroy</a>
+                </li>
+                <li class="nav-item text-center mx-3">
+                    <a class="nav-link" href="./index.html">Add New</a>
+                </li>
+                <li class="nav-item text-center mx-3">
+                    <a class="nav-link active" href="./recap.html">Recap</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container border m-5 p-3" id="t_recap">
+        <h1>Total</h1>
+        <h3 class="m-2" id="t_income"></h3>
+        <h3 class="m-2" id="t_expenses"></h3>
+        <br>
+        <h3 class="m-2">Expenses by Category</h3>
+        <ul class="m-2" id="t_cat">
+            
+        </ul>
+    </div>
+
+    <div class="container border m-5 p-3" id="m_recap">
+        <h1>Monthly</h1>
+        <h3 class="m-2" id="m_income">Total Income: $0.00</h3>
+        <h3 class="m-2" id="m_expenses">Total Expenses: $200.00</h3>
+        <br>
+        <h3 class="m-2">Expenses by Category</h3>
+        <ul class="m-2" id="m_cat">
+            
+        </ul>
+    </div>
+
+    <div class="container border m-5 p-3" id="w_recap">
+        <h1>Weekly</h1>
+        <h3 class="m-2" id="w_income">Total Income: $0.00</h3>
+        <h3 class="m-2" id="w_expenses">Total Expenses: $200.00</h3>
+        <br>
+        <h3 class="m-2">Expenses by Category</h3>
+        <ul class="m-2" id="w_cat">
+            
+        </ul>
+    </div>
+    
+    <!-- Bootstrap Requied JS:  jQuery, Popper.js, and Bootstrap's JavaScript plugins-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- My JS -->
+    <script src="./app.js"></script>
+    <script src="./recap.js"></script>
+</body>
+</html>
