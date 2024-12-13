@@ -89,5 +89,5 @@ txn": [
 
 
 ## Templates and Library Usage
-- bootstrap 5
+- Bootstrap 5
 - Unspash
